@@ -7,10 +7,19 @@ import org.springframework.stereotype.Service;
 
 import com.maldonadoismael.cursos.model.Curso;
 
+/**
+ * Implementación de la interfaz CursoServicio que proporciona operaciones de
+ * gestión de cursos.
+ */
+
 @Service
 public class CursoServicioImp implements CursoServicio {
 
     List<Curso> cursos;
+
+    /**
+     * Constructor que inicializa la lista de cursos con algunos cursos de ejemplo.
+     */
 
     public CursoServicioImp() {
         this.cursos = new ArrayList<>();
@@ -38,31 +47,65 @@ public class CursoServicioImp implements CursoServicio {
 
     }
 
+    /**
+     * Obtiene la lista de todos los cursos disponibles.
+     *
+     * @return Lista de cursos.
+     */
+
     @Override
     public List<Curso> listarCursos() {
         return this.cursos;
     }
 
+    /**
+     * Agrega un nuevo curso a la lista de cursos.
+     *
+     * @param nuevoCurso El curso a agregar.
+     * @return Lista de cursos actualizada.
+     */
+
     @Override
-    public List<Curso> altaCurso(Curso nuevoCurso) {
+    public List<Curso> darDeAltaCurso(Curso nuevoCurso) {
         this.cursos.add(nuevoCurso);
         return this.cursos;
 
     }
 
+    /**
+     * Elimina un curso de la lista por su código.
+     *
+     * @param codigo El código del curso a eliminar.
+     * @return Lista de cursos actualizada.
+     */
+
     @Override
-    public List<Curso> eliminacionCurso(int codigo) {
+    public List<Curso> eliminarCurso(int codigo) {
         cursos.removeIf(curso -> curso.getCodigoCurso() == codigo);
         return cursos;
     }
+
+    /**
+     * Busca un curso por su código.
+     *
+     * @param codigo El código del curso a buscar.
+     * @return El curso encontrado o null si no se encuentra.
+     */
 
     @Override
     public Curso buscarCurso(int codigo) {
         return cursos.stream().filter(curso -> curso.getCodigoCurso() == codigo).findFirst().orElse(null);
     }
 
+    /**
+     * Actualiza la duración de un curso por su código.
+     *
+     * @param codigo El código del curso a actualizar.
+     * @param horas  Las nuevas horas de duración del curso.
+     */
+
     @Override
-    public void actualizacionDuracionCurso(int codigo, int horas) {
+    public void actualizarDuracionCurso(int codigo, int horas) {
         Curso cursoAACtualizar = cursos.stream().filter(curso -> curso.getCodigoCurso() == codigo).findFirst()
                 .orElse(null);
 

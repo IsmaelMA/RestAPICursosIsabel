@@ -8,11 +8,11 @@ public interface CursoServicio {
 
     public List<Curso> listarCursos();
 
-    public List<Curso> altaCurso(Curso nuevoCurso);
+    public List<Curso> darDeAltaCurso(Curso nuevoCurso);
 
-    public List<Curso> eliminacionCurso(int codigo);
+    public List<Curso> eliminarCurso(int codigo);
 
     public Curso buscarCurso(int codigo);
 
-    public void actualizacionDuracionCurso(int codigo, int horas);
+    public void actualizarDuracionCurso(int codigo, int horas);
 }
