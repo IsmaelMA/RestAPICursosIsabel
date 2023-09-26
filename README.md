@@ -4,7 +4,7 @@ Este proyecto es una Rest API desarrollada en Spring Boot y ha sido creado como 
 
 ## Descripción del Proyecto
 
-Este proyecto es una API REST que proporciona servicios para gestionar cursos. Los cursos tienen información como código, nombre, duración en horas y precio. La API permite realizar operaciones como crear nuevos cursos, listar cursos existentes, buscar cursos por código y actualizar la duración de un curso.
+Este proyecto es una API REST que proporciona servicios para gestionar cursos. Los cursos tienen información como código, nombre, duración en horas y precio. La API permite realizar operaciones como crear nuevos cursos, eliminar cursos , listar cursos existentes, buscar cursos por código y actualizar la duración de un curso.
 
 ## Tecnologías Utilizadas
 
