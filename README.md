@@ -53,7 +53,7 @@ Body:
 - **Buscar un curso por código**:
   http://localhost:8080/buscar?codigo=x
 
-  - **Actualizar la duración de un curso**:
+- **Actualizar la duración de un curso**:
     http://localhost:8080/actualizarduracion?codigo=x&horas=y
 
      
