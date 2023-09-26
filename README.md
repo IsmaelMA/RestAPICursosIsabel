@@ -38,13 +38,14 @@ Asegúrate de tener instalado Java y Maven en tu sistema antes de ejecutar el pr
 Puedes utilizar herramientas como Postman para interactuar con la API. A continuación, se proporcionan algunos ejemplos de endpoints disponibles:
 
 - **Crear un nuevo curso**:
-[POST /api/cursos](http://localhost:8080/alta)
+POST /api/cursos](http://localhost:8080/alta)](http://localhost:8080/alta)
 Body:
 {
 "codigoCurso": 101,
 "nombreCurso": "Curso de Ejemplo",
 "horasDuracion": 50,
-"precioCurso": 1000}
+"precioCurso": 1000
+}
 
 - **Listar todos los cursos**:
  http://localhost:8080/listar
